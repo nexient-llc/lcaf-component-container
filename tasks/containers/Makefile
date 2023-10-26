@@ -49,7 +49,7 @@ docker/aws_ecr_login:
 .PHONY: docker/build
 docker/build : docker/check-env-vars
 	@echo "Building with CONTAINER_REGISTRY=$(CONTAINER_REGISTRY), CONTAINER_IMAGE_NAME=$(CONTAINER_IMAGE_NAME), CONTAINER_IMAGE_VERSION=$(CONTAINER_IMAGE_VERSION)"
-	$(DOCKER) buildx build --platform linux/amd64,linux/arm64 $(BUILD_ARGS) -t $(CONTAINER_REGISTRY)/$(CONTAINER_IMAGE_NAME):$(CONTAINER_IMAGE_VERSION) .
+	$(DOCKER) buildx build --platform linux/amd64,linux/arm64 $(BUILD_ARGS) -t $(CONTAINER_REGISTRY)/$(CONTAINER_IMAGE_NAME):$(CONTAINER_IMAGE_VERSION) --load .
 
 .PHONY: docker/push
 docker/push : docker/build
