@@ -1,0 +1,5 @@
+# Container-specific variables, uncomment and set before performing container builds!
+
+# CONTAINER_REGISTRY ?= some.registry.com
+# CONTAINER_IMAGE_NAME ?= mycontainer
+# CONTAINER_IMAGE_VERSION ?= 0.0.0

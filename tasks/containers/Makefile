@@ -13,6 +13,9 @@ FIND ?= find
 
 # Variables
 
+CONTAINER_INCLUDES_FILE = Makefile.container.includes
+-include $(CONTAINER_INCLUDES_FILE)
+
 CONFTEST_POLICY_DIRECTORIES ?= $(MODULE_DIR)/policy
 DOCKER_BUILD_ARCH ?= linux/amd64,linux/arm64
 
