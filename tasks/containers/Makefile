@@ -59,8 +59,8 @@ docker/build : docker/check-env-vars
 docker/push : docker/build
 	$(DOCKER) buildx build --platform $(DOCKER_BUILD_ARCH) $(BUILD_ARGS) -t $(CONTAINER_REGISTRY)/$(CONTAINER_IMAGE_NAME):$(CONTAINER_IMAGE_VERSION) --push .
 
-.PHONY: check
-check::
+.PHONY: test
+test::
 	$(MAKE) docker/build
 
 .PHONY: docker_compose/start
