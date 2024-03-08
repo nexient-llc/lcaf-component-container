@@ -47,6 +47,7 @@ ifeq ($(DISABLE_MAKE_CHECK_LINT),false)
 	$(MAKE) go/lint
 else
 	$(info "make go/lint has been disabled!")
+endif
 
 .PHONY: test
 test:: tfmodule/plan
